@@ -3,6 +3,8 @@ import React, { useState } from 'react';
 import { Link ,useNavigate} from 'react-router-dom';
 import{useDispatch, useSelector} from 'react-redux';
 import { signInStart,signInSuccess,signInFailure } from '../redux/user/userSlice';
+import OAuth from '../components/OAuth';
+
 
 export default function SignIn() {
   const [formData,setFormData]=useState({});
@@ -85,9 +87,19 @@ export default function SignIn() {
               id='password' onChange ={handleChange}/>
                
             </div>
-            <Button gradientDuoTone='purpleToPink' type='submit'>
-              Sign In
+            <Button gradientDuoTone='purpleToPink' type='submit' disabled={loading}>
+              {
+                loading ?(
+                  <>
+                  <Spinner size='sm'/>
+                  <span className='pl-3'>Loading...</span>
+                  </>
+                  
+                ):('Sign In')
+              }
             </Button>
+            <OAuth/>
+
             
 
           </form>
