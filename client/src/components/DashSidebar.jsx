@@ -23,7 +23,8 @@ export default function DashSidebar() {
                 <Sidebar.Item active={tab === 'profile'} 
                 icon = {HiUser} 
                 label = {"User"} 
-                lablecolor='dark'>
+                lablecolor='dark'
+                as='div'>
                     Profile
                 </Sidebar.Item>
                 <Sidebar.Item  icon = {HiArrowSmRight} classname='cursor-pointer' >
