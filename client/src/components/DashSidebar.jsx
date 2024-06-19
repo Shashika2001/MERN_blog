@@ -50,6 +50,9 @@ export default function DashSidebar() {
                     Sign Out
                 </Sidebar.Item>
                 </Link>
+                <Link to='/dashboard?tab=posts  '>  
+                <Sidebar.Item active={tab === 'posts'}></Sidebar.Item>
+                </Link>
             </Sidebar.ItemGroup>
         </Sidebar.Items>
     </Sidebar>
