@@ -10,7 +10,7 @@ import { useSelector } from 'react-redux';
 export default function DashSidebar() {
     const location =useLocation();
     const dispatch =useDispatch();
-    const {currentuser} = useSelector((state)=>state.user);
+    const {currentUser} = useSelector((state)=>state.user);
   const [tab,setTab] =useState('');
   useEffect(()=>{
     const urlParams = new URLSearchParams(location.search);
@@ -43,13 +43,13 @@ export default function DashSidebar() {
                 <Link to='/dashboard?tab=profile'>
                 <Sidebar.Item active={tab === 'profile'} 
                 icon = {HiUser} 
-                label = {currentuser.isAdmin ? 'Admin' : 'User'} 
+                label = {currentUser.isAdmin ? 'Admin' : 'User'} 
                 lablecolor='dark'
                 as='div'>
                     Profile
                 </Sidebar.Item>
                 </Link>
-                {currentuser.isAdmin && (
+                {currentUser.isAdmin && (
                   <Link to='/dashboard?tab=posts  '>  
                   <Sidebar.Item 
                   active={tab === 'posts'}
