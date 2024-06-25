@@ -2,7 +2,7 @@ import { Button, FileInput, Select, TextInput ,Alert} from 'flowbite-react';
 import  { useState } from 'react';
 import React from 'react'
 import ReactQuill from 'react-quill';
-import 'react-quill/dist/quill.snow.css';
+
 import {getStorage,ref,uploadBytesResumable,getDownloadURL} from 'firebase/storage';
 import {app} from '../firebase';
 import {CircularProgressbar} from 'react-circular-progressbar';
